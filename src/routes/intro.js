@@ -1,12 +1,14 @@
 import {Link} from 'react-router-dom';
 import style from '/Users/kimtaeyoung1/Documents/GitHub/kroean-army-mbti/src/styles/intro.module.css';
-import { useEffect, useState } from 'react';
 
 function Intro() {
-    const [isover, setIsOver] = useState(false);
+    function hovering(prop){
+        prop.target.className=style.mouseEntering
+    }// hovering active
     
-    const hovering=()=> setIsOver(true)
-    const nonhovering=()=> setIsOver(false)
+    function nonhovering(prop) {
+        prop.target.className=null
+    } // hovering is deathed
 
     return(
         <div>
@@ -15,16 +17,13 @@ function Intro() {
             </div>
             <div className="link">
                 <Link to='/typea'>
-                    <div onMouseEnter={hovering}
-                onMouseLeave={nonhovering}
-                className={isover? style.mouseEntering :null}
-                >시작하기</div>
+                    <button onMouseEnter={hovering} onMouseLeave={nonhovering}
+                >시작하기</button>
                 </Link>
                 
-                <div onMouseEnter={hovering}
+                <button onMouseEnter={hovering}
                 onMouseLeave={nonhovering}
-                className={isover? style.mouseEntering :null}
-                >공유하기</div>
+                >공유하기</button>
             </div>
         </div>
     )
