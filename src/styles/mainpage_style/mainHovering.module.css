@@ -1,0 +1,8 @@
+.mouseEntering{
+    background-color: red;
+}
+.goToHome {
+    width: 60px;
+    height: 60px;
+    font-size: x-small;
+}
