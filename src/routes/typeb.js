@@ -14,36 +14,43 @@ function Typeb(){
             </div>
 
             <div>
+                <Link to='/typec'>
                 <button 
                 onMouseEnter={mousehovering.hovering}
                 onMouseLeave={mousehovering.nonhovering} 
                 className={style.btn}>
                     
-                </button>
+                </button></Link>
+                
+                <Link to='/typec'>
                 <button 
                 onMouseEnter={mousehovering.hovering}
                 onMouseLeave={mousehovering.nonhovering} 
                 className={style.btn}>
                     
-                </button>
+                </button></Link>
+
+                <Link to='/typec'>
                 <button 
                 onMouseEnter={mousehovering.hovering}
                 onMouseLeave={mousehovering.nonhovering} 
                 className={style.btn}>
                     
-                </button>
+                </button></Link>
+                <Link to='/typec'>
                 <button 
                 onMouseEnter={mousehovering.hovering}
                 onMouseLeave={mousehovering.nonhovering} 
                 className={style.btn}>
                     
-                </button>
+                </button></Link>
+                <Link to='/typec'>
                 <button 
                 onMouseEnter={mousehovering.hovering}
                 onMouseLeave={mousehovering.nonhovering} 
                 className={style.btn}>
                     
-                </button>
+                </button></Link>
             </div>
         </div>
     )
