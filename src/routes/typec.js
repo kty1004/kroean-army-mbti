@@ -1,35 +1,45 @@
 import { useState } from "react";
 import {Link} from 'react-router-dom';
+import style from '/Users/kimtaeyoung1/Documents/GitHub/kroean-army-mbti/src/styles/mainpage_style/mainPageBtn.module.css';
 
 
 function Typec() {
-    let num=null; //오잉 이러면 왜 useState를 쓰지??
-    function onSubmit(event) {
-        event.preventDefault();
-        const num= event.target.input.value
-        console.log(num)
-    }
+    const [disabled, setDisabled] = useState(true);
 
+    let inputValue=0; //오잉 이러면 왜 useState를 쓰지??
+    function onChange(event) {
+        const inputValue= Number(event.target.value);
+        console.log(inputValue);
+        if (inputValue!==0) {
+            setDisabled(false);
+        } else{
+            setDisabled(true);
+        }
+
+    }
     return (
         <div>
+            <Link to='/'>
+                <button className={style.goToHome}>go to Home</button>
+            </Link>
             <div className="header">
             <h1>it's Type C</h1>
             <p>blablablablabla</p>
             </div>
 
             <div>
-                <form onSubmit={onSubmit}>
                 <input
+                onChange={onChange}
                 name='input'
                 type='number'
                 placeholder="please put in number"
                 required
                 />
-            
-                <button>next Step</button>
-                </form>
+                <Link to='/final'>
+                <button
+                disabled={disabled} //이건 갱신이 안되는 구나.
+                >next Step</button></Link>
                 
-
             </div>
             
         </div>
