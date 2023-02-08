@@ -1,7 +1,6 @@
 import style from '/Users/kimtaeyoung1/Documents/GitHub/kroean-army-mbti/src/styles/mainpage_style/mainPageBtn.module.css';
 import {Link} from 'react-router-dom';
 
-
 function Final() {
     return(
         <div>
