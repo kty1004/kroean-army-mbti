@@ -1,15 +1,15 @@
 import { type } from '@testing-library/user-event/dist/type/index.js';
 import {Link} from 'react-router-dom';
-import React, { useEffect } from 'react';
+import React, { useEffect,useState } from 'react';
 
-import * as csvdata from '/Users/kimtaeyoung1/Documents/GitHub/kroean-army-mbti/src/component/readingcsv.js';
+import Qurl from '../component/Qurl.js';
 import * as mousehovering from '../component/mousehovering/introhovering.js';
 import style from '/Users/kimtaeyoung1/Documents/GitHub/kroean-army-mbti/src/styles/allCommon.css';
 // style을 안 써도, 불러온 것은 모듈이 아니기에 모든 파일에 적용이 된다.
 
+
 function Intro() {
-    csvdata.ReadingCsv().then(res=> console.log(typeof(res)))
-    
+    Qurl()
     return(
         <div>
             <div className="header">
