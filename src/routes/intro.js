@@ -1,10 +1,12 @@
 import {Link} from 'react-router-dom';
-import style from '/Users/kimtaeyoung1/Documents/GitHub/kroean-army-mbti/src/styles/allCommon.css';
 import * as mousehovering from '../component/mousehovering/introhovering.js';
+import * as ReadingCsv from '../component/ReadingCsv.js';
 
+import style from '/Users/kimtaeyoung1/Documents/GitHub/kroean-army-mbti/src/styles/allCommon.css';
+// style을 안 써도, 불러온 것은 모듈이 아니기에 모든 파일에 적용이 된다.
 
 function Intro() {
-    
+    console.log(ReadingCsv)
     return(
         <div>
             <div className="header">
