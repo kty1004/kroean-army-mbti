@@ -1,43 +1,29 @@
 import {Link} from 'react-router-dom';
-import Typea from '../component/questionType/typea';
-import Typec from '../component/questionType/typec';
-import Typeb from '../component/questionType/typeb';
+import Typea from '/Users/kimtaeyoung1/Documents/GitHub/kroean-army-mbti/src/component/questionType/typea.js';
+import Typec from '/Users/kimtaeyoung1/Documents/GitHub/kroean-army-mbti/src/component/questionType/typec.js';
+import Typeb from '/Users/kimtaeyoung1/Documents/GitHub/kroean-army-mbti/src/component/questionType/typeb.js';
 
-import style from '/Users/kimtaeyoung1/Documents/GitHub/kroean-army-mbti/src/styles/mainpage_style/mainPageBtn.module.css';
-
-function CommonObject(){ //type마다 공통적으로 있는 부분
-    // 요 함수에서 질문 데이터를 받아야 함.
-    return (
-        <div>
-            <Link to='/'>
-                <button className={style.goToHome}>go to Home</button>
-            </Link>
-            <div className="question">
-                <h4>hello</h4>
-            </div>
-        </div>
-    )
-}
+import CommonObject from '../component/dealingQuestion/makeQpage.js/common';
 
 function QuestionPage(){
-    const testingNum=2;
-    if (testingNum===1) {
+    const questionType='a';
+    if (questionType==='a') {
         // typeA
         return (
-        <div>
-            <CommonObject/>
-            <Typea/>
-
-        </div>)
-    } else if(testingNum===2) {
+            <div>
+                <CommonObject/>
+                <Typea/>
+            </div>
+        )
+    } else if(questionType==='b') {
         // typeB
         return(
             <div>
                 <CommonObject/>
                 <Typeb/>
-        </div>
+            </div>
         )
-    } else if (testingNum===3) {
+    } else if (questionType==='c') {
         return (
             <div>
                 <CommonObject/>
@@ -48,7 +34,7 @@ function QuestionPage(){
     } else {
         return (
             <div>
-                <h1> Something is wrong.</h1>
+                <h1> question type is wrong.</h1>
             </div>
         )
     }

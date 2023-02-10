@@ -20,4 +20,4 @@ async function ReadingCsv() {
   return rows
 }
 
-export {ReadingCsv};
+export default ReadingCsv;
