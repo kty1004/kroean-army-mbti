@@ -4,9 +4,9 @@ import style from '/Users/kimtaeyoung1/Documents/GitHub/kroean-army-mbti/src/sty
 
 
 function Typec() {
+    
     const [disabled, setDisabled] = useState(true);
 
-    let inputValue=0; //오잉 이러면 왜 useState를 쓰지??
     function onChange(event) {
         const inputValue= Number(event.target.value);
         console.log(inputValue);
@@ -24,7 +24,7 @@ function Typec() {
             </Link>
             <div className="header">
             <h1>it's Type C</h1>
-            <p>blablablablabla</p>
+            <p>{question}</p>
             </div>
 
             <div>

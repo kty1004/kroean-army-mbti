@@ -3,6 +3,7 @@ import style from '/Users/kimtaeyoung1/Documents/GitHub/kroean-army-mbti/src/sty
 import * as mousehovering from '../component/mousehovering/mainhovering.js';
 
 function Typeb(){
+    // jsx에다가 함수 인자를 바로 입력할 수가 없음. 그건 props임
     return(
         <div>
             <Link to='/'>
@@ -10,7 +11,7 @@ function Typeb(){
             </Link>
             <div className='header'>
                 <h1>typeB 질문</h1>
-                <p>blablablablablabla</p>
+                <p>{question}</p>
             </div>
 
             <div>
