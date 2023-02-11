@@ -1,3 +1,8 @@
+# 다음 할 것
+1. user가 버튼을 누르고 submit하면 버튼에 할당된 값이 저장되고 페이지를 새로고침하여 새로운 질문을 띄움
+2. user가 버튼을 눌러서 얻은 값을 userdata라고 하자. userdata가 옳바르게 저장되었을 때에만 새로고침 이후에 다음 질문이 나오겠금 하자. 만약 userdata가 옳바르지 않다면 새로 고침을 막거나 하는 등의 조치를 취해야 한다.
+3. 새로 고침이 성공적으로 되었다면, 다음 질문을 common.js와 questionPage.js에서 받는 알고리즘을 만들어야 한다.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
