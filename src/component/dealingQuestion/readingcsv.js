@@ -19,7 +19,6 @@ async function ReadingCsv() {
       return row
     }
   });
-  
   return modifedRows
 }
 
