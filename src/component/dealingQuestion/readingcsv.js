@@ -23,3 +23,5 @@ async function ReadingCsv() {
 }
 
 export default ReadingCsv;
+// 이 데이터를 받는 곳
+// common.js, questionPage.js, app.js
