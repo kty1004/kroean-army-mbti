@@ -7,8 +7,9 @@ title: question data moving route(simple){
     }
   }
 csvData->readingCsv:bring csv data and processing them to read
-readingCsv->App: reading csv data and giving them to app.js
-App->QuestionPages
-QuestionPages->Common
-QuestionPages->typea,b,c
+
+readingCsv->QuestionPages
+readingCsv->Common
+QuestionPages->typea,b,c: giving only question type
+
 

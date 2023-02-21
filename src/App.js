@@ -7,23 +7,30 @@ import {
   BrowserRouter as Router,
   Route,
   Link,
-  Routes
+  Routes,
+  resolvePath
 } from 'react-router-dom';
-
-const questionOrder=1;
-let questionArray= ReadingCsv().then((res)=>questionArray=res[questionOrder].join()) 
+import { useState, useEffect } from 'react';
+import userEvent from '@testing-library/user-event';
 // questionArray를 받아오고 이를 각 js파일에 전송할 것임.
-function App() {
-  console.log(questionArray)
+const questionOrder=1
+// let questionArray= ReadingCsv().then((result)=>questionArray=result[questionOrder].join())
+ReadingCsv().then((result)=>{App(result[questionOrder])})
+
+
+function App(data) {
+  console.log(data)
   return (
     <Router>
       <Routes>
         <Route element={<Intro/>} path='/'/>
-        <Route element={<QuestionPage CsvData={questionArray}/>} path='/questionpage'/>
+        <Route element={<QuestionPage CsvData={data}/>} path='/questionpage'/>
         <Route element={<Final/>} path='/final'/>
       </Routes>
     </Router>
   );
+  
+  
 }
 
 export default App;

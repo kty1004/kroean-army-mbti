@@ -13,7 +13,7 @@ async function ReadingCsv() {
       for (let i=2; i <row.length; i++){
         row[1]=row[1]+row[i]
       }
-      row=[row[0],row[1], 'row인자 3개 였음']
+      row=[row[0],row[1]]
       return row
     } else { //row요소가 정상적으로 나왔을 때
       return row
