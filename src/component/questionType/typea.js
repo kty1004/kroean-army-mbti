@@ -3,13 +3,12 @@ import {Link} from 'react-router-dom';
 import style from '/Users/kimtaeyoung1/Documents/GitHub/kroean-army-mbti/src/styles/mainpage_style/mainPageBtn.module.css';
 import * as mousehovering from '/Users/kimtaeyoung1/Documents/GitHub/kroean-army-mbti/src/component/mousehovering/mainhovering.js';
 
-import ReadingCsv from '/Users/kimtaeyoung1/Documents/GitHub/kroean-army-mbti/src/component/dealingQuestion/readingcsv.js';
-import SavingUserValue from '../dealingUserValue/savingValue';
+export function SendingUserValueToSavingValue(value){
+    return value
+}
 
-
-function Typea(){
+export function Typea(){
      // jsx에다가 함수 인자를 바로 입력할 수가 없음. 그건 props임
-
     return(
         <div>
             <div className="ox">
@@ -17,7 +16,7 @@ function Typea(){
                 <button
                 onMouseEnter={mousehovering.hovering} 
                 onMouseLeave={mousehovering.nonhovering}
-                onClick={()=>SavingUserValue('o')}
+                onClick={()=>SendingUserValueToSavingValue('o')}
                 className={style.btn}>
                     o
                 </button>
@@ -26,7 +25,7 @@ function Typea(){
                 <button 
                 onMouseEnter={mousehovering.hovering} 
                 onMouseLeave={mousehovering.nonhovering}
-                onClick={()=>SavingUserValue('x')}
+                onClick={()=>SendingUserValueToSavingValue('x')}
                 className={style.btn}>
                     x
                 </button>
@@ -36,5 +35,3 @@ function Typea(){
     )
 
 }
-
-export default Typea;
