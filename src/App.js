@@ -18,13 +18,12 @@ const questionOrder=1
 ReadingCsv().then((result)=>{App(result[questionOrder])})
 
 
-function App(data) {
-  console.log(data)
+function App() {
   return (
     <Router>
       <Routes>
         <Route element={<Intro/>} path='/'/>
-        <Route element={<QuestionPage CsvData={data}/>} path='/questionpage'/>
+        <Route element={<QuestionPage />} path='/questionpage'/>
         <Route element={<Final/>} path='/final'/>
       </Routes>
     </Router>

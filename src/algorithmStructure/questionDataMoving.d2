@@ -6,10 +6,16 @@ title: question data moving route(simple){
       bold: true
     }
   }
-csvData->readingCsv:bring csv data and processing them to read
+csvData->readingCsv&nextQuestion:bring csv data and processing them to read
 
-readingCsv->QuestionPages
-readingCsv->Common
-QuestionPages->typea,b,c: giving only question type
+readingCsv&nextQuestion<->QuestionPages
+readingCsv&nextQuestion<->App
+readingCsv&nextQuestion<->Common
+QuestionPages->Typea,b,c: giving only question type
+explanation: |md
+  **ReadingCsv** is actived only at first.   
+  then **nextQuestion** is actived at all-time(expect first).
+|
+
 
 
