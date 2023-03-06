@@ -3,13 +3,12 @@ import Typec from '/Users/kimtaeyoung1/Documents/GitHub/kroean-army-mbti/src/com
 import Typeb from '/Users/kimtaeyoung1/Documents/GitHub/kroean-army-mbti/src/component/questionType/typeb.js';
 
 import CommonObject from '../component/dealingQuestion/makeQpage.js/common';
-import {QuestionNum} from '/Users/kimtaeyoung1/Documents/GitHub/kroean-army-mbti/src/component/dealingQuestion/makeQpage.js/nextQuestion.js'
+import DealingUserValue from '../component/dealingUserValue/dealingUserValue';
 
 import ReadingCsv from '/Users/kimtaeyoung1/Documents/GitHub/kroean-army-mbti/src/component/dealingQuestion/readingcsv.js';
 import { useState, useEffect } from 'react';
 
 
-// let questionType= ReadingCsv().then((res)=>res[QuestionNum()]).then((result)=> {return result[0]});
 
 function QuestionPage(){
     const [questionType, setQuestionType]= useState(null);
@@ -17,11 +16,13 @@ function QuestionPage(){
     useEffect(()=>{
         async function getData(){
             const res= await ReadingCsv()
-            const data= await res[QuestionNum()]
+            const questionNum= await DealingUserValue()
+            const data= await res[questionNum]
             setQuestionType(data[0])
         }
         getData()
     },[]);
+    
     if (questionType==='a') {
         // typeA
         return (
@@ -49,8 +50,9 @@ function QuestionPage(){
     } else {
         return (
             <div>
-                <h1>{`${questionType}: questionType is wrong.`}</h1>
+                <h1>questoinPage: Something is wrong.</h1>
                 <p>{`${typeof(questionType)}: questionType's data type`}</p>
+                <p>{questionType===null ? 'null':questionType}: this is questionType</p>
             </div>
         )
     }
